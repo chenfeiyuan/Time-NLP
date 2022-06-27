@@ -19,8 +19,8 @@ import com.time.enums.RangeTimeEnum;
  * @since 2016年5月4日
  */
 public class TimeUnit {
-	//有需要可使用
-	//private static final Logger LOGGER = LoggerFactory.getLogger(TimeUnit.class);
+    //有需要可使用
+    //private static final Logger LOGGER = LoggerFactory.getLogger(TimeUnit.class);
     /**
      * 目标字符串
      */
@@ -66,11 +66,17 @@ public class TimeUnit {
         Time_Normalization();
     }
 
+
+
     /**
      * return the accurate time object
      */
     public Date getTime() {
         return time;
+    }
+
+    public String getTime_Expression() {
+        return this.Time_Expression;
     }
 
     /**
@@ -184,14 +190,14 @@ public class TimeUnit {
         }
         /*
          * 对关键字：早（包含早上/早晨/早间），上午，中午,午间,下午,午后,晚上,傍晚,晚间,晚,pm,PM的正确时间计算
-		 * 规约：
-		 * 1.中午/午间0-10点视为12-22点
-		 * 2.下午/午后0-11点视为12-23点
-		 * 3.晚上/傍晚/晚间/晚1-11点视为13-23点，12点视为0点
-		 * 4.0-11点pm/PM视为12-23点
-		 * 
-		 * add by kexm
-		 */
+         * 规约：
+         * 1.中午/午间0-10点视为12-22点
+         * 2.下午/午后0-11点视为12-23点
+         * 3.晚上/傍晚/晚间/晚1-11点视为13-23点，12点视为0点
+         * 4.0-11点pm/PM视为12-23点
+         *
+         * add by kexm
+         */
         rule = "凌晨";
         pattern = Pattern.compile(rule);
         match = pattern.matcher(Time_Expression);
@@ -325,11 +331,11 @@ public class TimeUnit {
      * 该方法识别时间表达式单元的秒字段
      */
     public void norm_setsecond() {
-		/*
-		 * 添加了省略“分”说法的时间
-		 * 如17点15分32
-		 * modified by 曹零
-		 */
+        /*
+         * 添加了省略“分”说法的时间
+         * 如17点15分32
+         * modified by 曹零
+         */
         String rule = "([0-5]?[0-9](?=秒))|((?<=分)[0-5]?[0-9])";
 
         Pattern pattern = Pattern.compile(rule);
@@ -380,11 +386,11 @@ public class TimeUnit {
                 isAllDayTime = false;
             }
         }
-		/*
-		 * 增加了:固定形式时间表达式的
-		 * 中午,午间,下午,午后,晚上,傍晚,晚间,晚,pm,PM
-		 * 的正确时间计算，规约同上
-		 */
+        /*
+         * 增加了:固定形式时间表达式的
+         * 中午,午间,下午,午后,晚上,傍晚,晚间,晚,pm,PM
+         * 的正确时间计算，规约同上
+         */
         rule = "(中午)|(午间)";
         pattern = Pattern.compile(rule);
         match = pattern.matcher(Time_Expression);
@@ -451,11 +457,11 @@ public class TimeUnit {
             _tp.tunit[2] = Integer.parseInt(tmp_parser[1]);
             _tp.tunit[0] = Integer.parseInt(tmp_parser[2]);
         }
-		
-		/*
-		 * 增加了:固定形式时间表达式 年.月.日 的正确识别
-		 * add by 曹零
-		 */
+
+        /*
+         * 增加了:固定形式时间表达式 年.月.日 的正确识别
+         * add by 曹零
+         */
         rule = "[0-9]?[0-9]?[0-9]{2}\\.((10)|(11)|(12)|([1-9]))\\.((?<!\\d))([0-3][0-9]|[1-9])";
         pattern = Pattern.compile(rule);
         match = pattern.matcher(Time_Expression);
