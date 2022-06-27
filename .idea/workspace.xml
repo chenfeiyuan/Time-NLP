@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bded8ba3-294c-4d1e-98c0-848a90173092" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/time/nlp/TimeNormalizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/time/nlp/TimeNormalizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/time/nlp/TimeUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/time/nlp/TimeUnit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/time/util/CommonDateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/time/util/CommonDateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/time/util/DateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/time/util/DateUtil.java" afterDir="false" />
-    </list>
+    <list default="true" id="bded8ba3-294c-4d1e-98c0-848a90173092" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -265,6 +259,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -361,7 +356,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656164392122</updated>
-      <workItem from="1656164396176" duration="12802000" />
+      <workItem from="1656164396176" duration="13398000" />
     </task>
     <servers />
   </component>
@@ -371,7 +366,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12802000" />
+    <option name="totallyTimeSpent" value="13398000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
